@@ -1,3 +1,65 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 17vw;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
+}
+header h1 {
+  margin: 0;
+}
+header h1 img {
+  width: 45vw;
+  height: 20vw;
+  margin: auto;
+  display: block;
+}
+
+.address {
+  background-color: #eaeaea;
+  height: 9.5vw;
+  padding-left: 27vw;
+  padding-top: 3.5vw;
+}
+.address i {
+  display: inline;
+  font-size: 4vw;
+  margin-right: 3vw;
+}
+.address h2 {
+  display: inline;
+  font-size: 4.5vw;
+}
+
+.explore {
+  text-align: center;
+  border: 1px solid black;
+  background-color: #f6f6f6;
+  padding-top: 11vw;
+  padding-bottom: 18vw;
+}
+.explore h2 {
+  font-size: 7vw;
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 3vw;
+  line-height: 7.5vw;
+}
+.explore p {
+  margin-top: 0;
+  font-size: 5.5vw;
+  margin-bottom: 12vw;
+}
+.explore__button {
+  font-size: 5vw;
+  border-radius: 10vw 10vw 10vw 10vw;
+  text-decoration: none;
+  color: white;
+  background-color: #e872da;
+  padding: 3.5vw 3.5vw 3.5vw 3.5vw;
+}
+
 img {
   width: 50px;
   height: 35px;
