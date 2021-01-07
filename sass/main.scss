@@ -1,17 +1,21 @@
 @import "./Utils/variables";
+@import "./Utils/mixins.scss";
 
 body{
     margin: 0;
 }
 
+//mixin pour le header et footer car ils se repetent sur chaque page
 header{
-    height: 17vw;
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.6) ;
+    // height: 17vw;
+    box-shadow: 0px 0px 1vw 0px rgb(0,0,0,0.6);
+    margin-bottom: 0.5vw;
     h1{
         margin: 0;
         img{
             width: 45vw;
-            height:20vw;
+            height: 15vw;
+            padding-top: 1.5vw;
             margin: auto;
             display: block;
         }
@@ -38,12 +42,12 @@ header{
 
 .explore{
     text-align: center;
-    border:1px solid black;
+    // border:1px solid black;
     background-color: $background-color-explore;
-    padding-top: 11vw;
+    padding-top: 10vw;
     padding-bottom: 18vw;
     h2{
-        font-size: $font-size-h2;
+        @include title-h2;
         // margin-top: 10vw;
         width: 70vw;
         margin:auto;
@@ -66,6 +70,43 @@ header{
         // background-color: linear-gradient(to bottom right, rgb(232, 114, 218), rgb(166, 92, 219) );
         padding: 3.5vw 3.5vw 3.5vw 3.5vw;
         // margin-bottom: 5vw;
+    }
+}
+
+.howtodo{
+    border:1px solid black;
+    h2{
+        @include title-h2;
+        margin-top: 12.5vw;
+        margin-left: 6vw;
+    }
+    &__cards{
+        margin-left: 6vw;
+        display: flex;
+        flex-wrap: wrap;
+        &__card{
+            border:1px solid black;
+            width:90%;
+            position: relative;
+            &__number{
+                // display: inline;
+                position: absolute;
+                background-color: rgb(232, 114, 218);
+                border-radius: 3.5vw 3.5vw 3.5vw 3.5vw;
+                color: white;
+                width: 5vw;
+                height: 5vw;
+                text-align: center;
+            }
+            &__icon{
+                margin-left: 7vw;
+                display: inline;
+                color: grey;
+            }
+            p{
+                display: inline;
+            }
+        }
     }
 }
 

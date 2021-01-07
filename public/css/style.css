@@ -3,15 +3,16 @@ body {
 }
 
 header {
-  height: 17vw;
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 1vw 0px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5vw;
 }
 header h1 {
   margin: 0;
 }
 header h1 img {
   width: 45vw;
-  height: 20vw;
+  height: 15vw;
+  padding-top: 1.5vw;
   margin: auto;
   display: block;
 }
@@ -34,13 +35,13 @@ header h1 img {
 
 .explore {
   text-align: center;
-  border: 1px solid black;
   background-color: #f6f6f6;
-  padding-top: 11vw;
+  padding-top: 10vw;
   padding-bottom: 18vw;
 }
 .explore h2 {
   font-size: 7vw;
+  font-weight: bold;
   width: 70vw;
   margin: auto;
   margin-bottom: 3vw;
@@ -58,6 +59,43 @@ header h1 img {
   color: white;
   background-color: #e872da;
   padding: 3.5vw 3.5vw 3.5vw 3.5vw;
+}
+
+.howtodo {
+  border: 1px solid black;
+}
+.howtodo h2 {
+  font-size: 7vw;
+  font-weight: bold;
+  margin-top: 12.5vw;
+  margin-left: 6vw;
+}
+.howtodo__cards {
+  margin-left: 6vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.howtodo__cards__card {
+  border: 1px solid black;
+  width: 90%;
+  position: relative;
+}
+.howtodo__cards__card__number {
+  position: absolute;
+  background-color: #e872da;
+  border-radius: 3.5vw 3.5vw 3.5vw 3.5vw;
+  color: white;
+  width: 5vw;
+  height: 5vw;
+  text-align: center;
+}
+.howtodo__cards__card__icon {
+  margin-left: 7vw;
+  display: inline;
+  color: grey;
+}
+.howtodo__cards__card p {
+  display: inline;
 }
 
 img {
