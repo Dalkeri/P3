@@ -1,100 +1,125 @@
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 1280px;
 }
 
 header {
-  box-shadow: 0px 0px 1vw 0px rgba(0, 0, 0, 0.6);
-  margin-bottom: 0.5vw;
+  height: 64px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2px;
 }
 header h1 {
   margin: 0;
+  height: 100%;
 }
 header h1 img {
-  width: 45vw;
-  height: 15vw;
-  padding-top: 1.5vw;
+  width: 155px;
+  height: 100%;
+  padding-top: 5px;
   margin: auto;
   display: block;
 }
 
 .address {
   background-color: #eaeaea;
-  height: 9.5vw;
-  padding-left: 27vw;
-  padding-top: 3.5vw;
+  height: 37px;
+  padding-top: 12px;
+  text-align: center;
 }
-.address i {
+.address__elements {
+  border: 1px solid black;
   display: inline;
-  font-size: 4vw;
-  margin-right: 3vw;
+  padding-right: 10px;
 }
-.address h2 {
+.address__elements i {
   display: inline;
-  font-size: 4.5vw;
+  font-size: 1em;
+  margin-right: 15px;
+}
+.address__elements h2 {
+  display: inline;
+  font-size: 1.1em;
 }
 
 .explore {
   text-align: center;
   background-color: #f6f6f6;
-  padding-top: 10vw;
-  padding-bottom: 18vw;
+  padding-top: 38px;
+  padding-bottom: 67px;
 }
 .explore h2 {
-  font-size: 7vw;
+  font-size: 1.7em;
   font-weight: bold;
-  width: 70vw;
+  width: 70%;
   margin: auto;
-  margin-bottom: 3vw;
-  line-height: 7.5vw;
+  margin-bottom: 11px;
+  line-height: 1.1em;
 }
 .explore p {
   margin-top: 0;
-  font-size: 5.5vw;
-  margin-bottom: 12vw;
+  font-size: 1.25em;
+  line-height: 1em;
+  margin-bottom: 48px;
 }
 .explore__button {
-  font-size: 5vw;
-  border-radius: 10vw 10vw 10vw 10vw;
+  font-size: 1.1em;
+  border-radius: 25px 25px 25px 25px;
   text-decoration: none;
   color: white;
-  background-color: #e872da;
-  padding: 3.5vw 3.5vw 3.5vw 3.5vw;
+  background: linear-gradient(to bottom, #e872da, #a65cdb);
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px 15px 20px;
 }
 
-.howtodo {
-  border: 1px solid black;
-}
 .howtodo h2 {
-  font-size: 7vw;
+  font-size: 1.7em;
   font-weight: bold;
-  margin-top: 12.5vw;
-  margin-left: 6vw;
+  margin-top: 45px;
+  margin-left: 20px;
+  margin-bottom: 28px;
 }
 .howtodo__cards {
-  margin-left: 6vw;
+  margin-left: 20px;
+  margin-right: 15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .howtodo__cards__card {
-  border: 1px solid black;
-  width: 90%;
+  margin-bottom: 25px;
+  width: 96%;
+  margin-right: 2%;
+  margin-left: 2%;
+  max-width: 350px;
   position: relative;
+  height: 45px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+  padding-top: 30px;
+  border-radius: 25px;
 }
 .howtodo__cards__card__number {
   position: absolute;
-  background-color: #e872da;
-  border-radius: 3.5vw 3.5vw 3.5vw 3.5vw;
+  left: -10px;
+  background-color: #9356dc;
+  border-radius: 20px 20px 20px 20px;
   color: white;
-  width: 5vw;
-  height: 5vw;
+  padding-top: 5px;
+  width: 25px;
+  height: 20px;
   text-align: center;
 }
 .howtodo__cards__card__icon {
-  margin-left: 7vw;
-  display: inline;
+  margin-left: 40px;
   color: grey;
 }
+.howtodo__cards__card__icon--pink {
+  color: #9356dc;
+}
 .howtodo__cards__card p {
+  margin-left: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
   display: inline;
 }
 

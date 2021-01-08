@@ -2,20 +2,23 @@
 @import "./Utils/mixins.scss";
 
 body{
-    margin: 0;
+    margin: auto;
+    max-width: 1280px;
 }
 
 //mixin pour le header et footer car ils se repetent sur chaque page
 header{
-    // height: 17vw;
-    box-shadow: 0px 0px 1vw 0px rgb(0,0,0,0.6);
-    margin-bottom: 0.5vw;
+    height: 64px;
+    box-shadow: 0px 0px 4px 0px rgb(0,0,0,0.6);
+    margin-bottom: 2px;
     h1{
         margin: 0;
+        height: 100%;
         img{
-            width: 45vw;
-            height: 15vw;
-            padding-top: 1.5vw;
+            // border:1px solid black;
+            width: 155px;
+            height: 100%;
+            padding-top: 5px;
             margin: auto;
             display: block;
         }
@@ -24,86 +27,107 @@ header{
 
 .address{
     background-color: $background-color-address;
-    height: 9.5vw;
-    padding-left: 27vw;
-    padding-top: 3.5vw;
-    // &__elements{
+    height: 37px;
+    // padding-left: 26%;
+    // margin:auto;
+    padding-top: 12px;
+    text-align: center;
+    &__elements{
+        border:1px solid black;
+        display: inline;
+        padding-right: 10px;
         i{
             display: inline;
-            font-size: 4vw;
-            margin-right: 3vw;
+            font-size: 1em;
+            margin-right: 15px;
         }
         h2{
             display: inline;
-            font-size: 4.5vw;
+            font-size: 1.1em;
         }
-    // }
+    }
 }
 
 .explore{
     text-align: center;
     // border:1px solid black;
-    background-color: $background-color-explore;
-    padding-top: 10vw;
-    padding-bottom: 18vw;
+    background-color: $background-color-light-grey;
+    padding-top: 38px;
+    padding-bottom: 67px;
     h2{
         @include title-h2;
         // margin-top: 10vw;
-        width: 70vw;
+        width: 70%;
         margin:auto;
-        margin-bottom: 3vw;
-        line-height: 7.5vw;
+        margin-bottom: 11px;
+        line-height: 1.1em;
         
     }
     p{
         margin-top: 0;
-        font-size: 5.5vw;
-        margin-bottom: 12vw;
+        font-size: 1.25em;
+        line-height: 1em;
+        margin-bottom: 48px;
     }
     &__button{
-        // border:1px solid black;
-        font-size: 5vw;
-        border-radius: 10vw 10vw 10vw 10vw;
+        font-size: 1.1em;
+        border-radius: 25px 25px 25px 25px;
         text-decoration: none;
         color: white;
-        background-color: rgb(232, 114, 218);
-        // background-color: linear-gradient(to bottom right, rgb(232, 114, 218), rgb(166, 92, 219) );
-        padding: 3.5vw 3.5vw 3.5vw 3.5vw;
-        // margin-bottom: 5vw;
+        background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
+        box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
+        padding: 15px 20px 15px 20px;
     }
 }
 
 .howtodo{
-    border:1px solid black;
+    // border:1px solid black;
     h2{
         @include title-h2;
-        margin-top: 12.5vw;
-        margin-left: 6vw;
+        margin-top: 45px;;
+        margin-left: 20px;
+        margin-bottom: 28px;
     }
     &__cards{
-        margin-left: 6vw;
+        margin-left: 20px;
+        margin-right:15px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         &__card{
-            border:1px solid black;
-            width:90%;
+            margin-bottom: 25px;
+            width: 96%;
+            margin-right:2%;
+            margin-left: 2%;
+            max-width: 350px;
             position: relative;
+            height: 45px;
+            background-color: $background-color-light-grey;
+            box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
+            padding-top: 30px;
+            border-radius: 25px;
             &__number{
-                // display: inline;
                 position: absolute;
-                background-color: rgb(232, 114, 218);
-                border-radius: 3.5vw 3.5vw 3.5vw 3.5vw;
+                left: -10px;
+                background-color:$pink-color;
+                border-radius: 20px 20px 20px 20px;
                 color: white;
-                width: 5vw;
-                height: 5vw;
+                padding-top: 5px;
+                width: 25px;
+                height: 20px;
                 text-align: center;
             }
             &__icon{
-                margin-left: 7vw;
-                display: inline;
+                margin-left: 40px;
                 color: grey;
+                &--pink{
+                    color: $pink-color;
+                }
             }
             p{
+                margin-left: 15px;
+                font-size: 1.1em;
+                font-weight: bold;
                 display: inline;
             }
         }
