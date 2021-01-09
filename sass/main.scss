@@ -9,7 +9,7 @@ body{
 //mixin pour le header et footer car ils se repetent sur chaque page
 header{
     height: 64px;
-    box-shadow: 0px 0px 4px 0px rgb(0,0,0,0.6);
+    box-shadow: 0px 0px 4px rgb(0,0,0,0.6);
     margin-bottom: 2px;
     h1{
         margin: 0;
@@ -33,7 +33,6 @@ header{
     padding-top: 12px;
     text-align: center;
     &__elements{
-        border:1px solid black;
         display: inline;
         padding-right: 10px;
         i{
@@ -75,21 +74,21 @@ header{
         text-decoration: none;
         color: white;
         background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
-        box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
+        @include button-shadow;
         padding: 15px 20px 15px 20px;
     }
 }
 
 .howtodo{
     // border:1px solid black;
+    padding-bottom: 40px;
+    padding-left: $padding-left;
     h2{
         @include title-h2;
         margin-top: 45px;;
-        margin-left: 20px;
         margin-bottom: 28px;
     }
     &__cards{
-        margin-left: 20px;
         margin-right:15px;
         display: flex;
         flex-wrap: wrap;
@@ -103,9 +102,9 @@ header{
             position: relative;
             height: 45px;
             background-color: $background-color-light-grey;
-            box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
             padding-top: 30px;
             border-radius: 25px;
+            @include light-shadow;
             &__number{
                 position: absolute;
                 left: -10px;
@@ -130,6 +129,50 @@ header{
                 font-weight: bold;
                 display: inline;
             }
+        }
+    }
+}
+
+.restaurants{
+    border:1px solid black;
+    background-color: $background-color-light-grey;
+    padding-top: 25px;
+    padding-left: $padding-left;
+    h2{
+        @include title-h2;
+    }
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        &__card{
+            // border:1px solid black;
+            width: 95%;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            margin-right: 5%;
+            background-color: white;
+            border-radius: 15px;
+            @include light-shadow;
+            position: relative;
+            &__img{
+                object-fit: cover;
+                // object-position: 100% 150%;
+                width: 100%;
+                height: 70%;
+            }
+            .vertical_img{
+                object-position: 50% 60%;
+            }
+            .tag_new{
+                position: absolute;
+                background-color: green;
+                border:1px solid black;
+            }
+            // p{
+            //     margin-b
+            // }
         }
     }
 }
