@@ -9,8 +9,7 @@ body{
 //mixin pour le header et footer car ils se repetent sur chaque page
 header{
     height: 64px;
-    box-shadow: 0px 0px 4px rgb(0,0,0,0.6);
-    margin-bottom: 2px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
     h1{
         margin: 0;
         height: 100%;
@@ -37,55 +36,52 @@ header{
         padding-right: 10px;
         i{
             display: inline;
-            font-size: 1em;
+            font-size: 1rem;
             margin-right: 15px;
         }
         h2{
             display: inline;
-            font-size: 1.1em;
+            font-size: 1.1rem;
         }
     }
 }
 
 .explore{
     text-align: center;
-    // border:1px solid black;
     background-color: $background-color-light-grey;
-    padding-top: 38px;
-    padding-bottom: 67px;
+    padding-top: 37px;
+    padding-bottom: 71px;
     h2{
         @include title-h2;
-        // margin-top: 10vw;
         width: 70%;
         margin:auto;
         margin-bottom: 11px;
-        line-height: 1.1em;
-        
+        line-height: 1.05em;
     }
     p{
         margin-top: 0;
-        font-size: 1.25em;
-        line-height: 1em;
-        margin-bottom: 48px;
+        font-size: 1.3rem;
+        line-height: 1.1em;
+        margin-bottom: 46px;
     }
-    &__button{
-        font-size: 1.1em;
-        border-radius: 25px 25px 25px 25px;
-        text-decoration: none;
-        color: white;
-        background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
-        @include button-shadow;
-        padding: 15px 20px 15px 20px;
-    }
+}
+.explore__button{
+    font-size: 1.1rem;
+    border-radius: 25px 25px 25px 25px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
+    @include button-shadow;
+    padding: 15px 20px 15px 20px;
 }
 
 .howtodo{
-    // border:1px solid black;
     padding-bottom: 40px;
+    padding-top: 20px;
     padding-left: $padding-left;
     h2{
         @include title-h2;
-        margin-top: 45px;;
+        // margin-top: 45px;
         margin-bottom: 28px;
     }
     &__cards{
@@ -93,50 +89,52 @@ header{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        &__card{
-            margin-bottom: 25px;
-            width: 96%;
-            margin-right:2%;
-            margin-left: 2%;
-            max-width: 350px;
-            position: relative;
-            height: 45px;
-            background-color: $background-color-light-grey;
-            padding-top: 30px;
-            border-radius: 25px;
-            @include light-shadow;
-            &__number{
-                position: absolute;
-                left: -10px;
-                background-color:$pink-color;
-                border-radius: 20px 20px 20px 20px;
-                color: white;
-                padding-top: 5px;
-                width: 25px;
-                height: 20px;
-                text-align: center;
-            }
-            &__icon{
-                margin-left: 40px;
-                color: grey;
-                &--pink{
-                    color: $pink-color;
-                }
-            }
-            p{
-                margin-left: 15px;
-                font-size: 1.1em;
-                font-weight: bold;
-                display: inline;
-            }
-        }
+        
     }
 }
+.howtodo_card{
+    margin-bottom: 24px;
+    width: 96%;
+    margin-right:2%;
+    margin-left: 2%;
+    max-width: 350px;
+    position: relative;
+    height: 45px;
+    background-color: $background-color-light-grey;
+    padding-top: 29px;
+    border-radius: 25px;
+    @include light-shadow;
+    &__number{
+        position: absolute;
+        left: -10px;
+        background-color:$pink-color;
+        border-radius: 20px 20px 20px 20px;
+        color: white;
+        padding-top: 5px;
+        width: 25px;
+        height: 20px;
+        text-align: center;
+    }
+    &__icon{
+        margin-left: 40px;
+        color: grey;
+        &--pink{
+            color: $pink-color;
+        }
+    }
+    p{
+        margin-left: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        display: inline;
+    }
+}
+
 
 .restaurants{
     border:1px solid black;
     background-color: $background-color-light-grey;
-    padding-top: 25px;
+    padding-top: 30px;
     padding-left: $padding-left;
     h2{
         @include title-h2;
@@ -144,37 +142,37 @@ header{
     &__cards{
         display: flex;
         flex-wrap: wrap;
-        &__card{
-            // border:1px solid black;
-            width: 95%;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-            margin-right: 5%;
-            background-color: white;
-            border-radius: 15px;
-            @include light-shadow;
-            position: relative;
-            &__img{
-                object-fit: cover;
-                // object-position: 100% 150%;
-                width: 100%;
-                height: 70%;
-            }
-            .vertical_img{
-                object-position: 50% 60%;
-            }
-            .tag_new{
-                position: absolute;
-                background-color: green;
-                border:1px solid black;
-            }
-            // p{
-            //     margin-b
-            // }
-        }
     }
+}
+
+.restaurant_card{
+    width: 95%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-right: 5%;
+    background-color: white;
+    border-radius: 15px;
+    @include light-shadow;
+    position: relative;
+    &__img{
+        object-fit: cover;
+        object-position: 100% 150%;
+        width: 100%;
+        height: 70%;
+    }
+    .vertical_img{
+        object-position: 50% 60%;
+    }
+    .tag_new{
+        position: absolute;
+        background-color: green;
+        border:1px solid black;
+    }
+    // p{
+    //     margin-b
+    // }
 }
 
 img{
