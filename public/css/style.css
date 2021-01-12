@@ -140,31 +140,55 @@ header h1 img {
   flex-wrap: wrap;
 }
 
-.restaurant_card {
+.restaurantCard {
   width: 95%;
   height: 250px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   margin-right: 5%;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-.restaurant_card__img {
+.restaurantCard__img {
   object-fit: cover;
-  object-position: 100% 150%;
+  object-position: 100% 100%;
+  border-radius: 15px 15px 0px 0px;
   width: 100%;
   height: 70%;
 }
-.restaurant_card .vertical_img {
+.restaurantCard .vertical_img {
   object-position: 50% 60%;
 }
-.restaurant_card .tag_new {
+.restaurantCard .tag_new {
   position: absolute;
-  background-color: green;
-  border: 1px solid black;
+  padding: 5px 10px 5px 10px;
+  top: 10px;
+  right: 10px;
+  background-color: #85ebb8;
+  color: green;
+}
+.restaurantCard__title {
+  margin-top: 13px;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 3%;
+}
+.restaurantCard__location {
+  margin: 0;
+  font-size: 1.2rem;
+  margin-top: 2px;
+  padding-left: 3%;
+}
+.restaurantCard .fa-heart {
+  position: absolute;
+  font-size: 1.3rem;
+  -webkit-text-stroke: 1px white;
+  right: 20px;
+  bottom: 30px;
 }
 
 img {
