@@ -214,19 +214,19 @@ footer{
     img{
         filter: invert(100%);
         transform-origin: top left;
-        transform: scale(0.5);
-        border:1px solid white;
+        transform: scale(0.5);        
     }
     .footer__menu{
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         a{
-            display: inline-block;
+            display: inline;
             font-size: 1.1rem;
             text-decoration: none;
             color: white;
             width: 20%;
-            min-width: 300px;
+            min-width: 200px;
             margin-bottom: 4px;
             i{
                 font-size: 0.8rem;
