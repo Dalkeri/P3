@@ -132,70 +132,109 @@ header{
 
 
 .restaurants{
-    border:1px solid black;
     background-color: $background-color-light-grey;
     padding-top: 30px;
     padding-left: $padding-left-sections;
+    padding-bottom: 50px;
     h2{
         @include title-h2;
     }
     &__cards{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
 .restaurantCard{
     width: 95%;
+    // border:1px solid black;
+    max-width: 350px;
+    justify-content: center;
     height: 250px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 18px;
-    margin-right: 5%;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    margin-right: 4%;
     background-color: white;
     border-radius: 15px;
     @include light-shadow;
     position: relative;
     &__img{
         object-fit: cover;
-        object-position: 100% 100%;
+        // object-position: 100% 150%;
         border-radius: 15px 15px 0px 0px;
         width: 100%;
         height: 70%;
+        margin-bottom: 12px;
+
     }
     .vertical_img{
         object-position: 50% 60%;
+        height: 70%;
+        margin-bottom: 12px;
     }
     .tag_new{
         position: absolute;
         padding: 5px 10px 5px 10px;
         top: 10px;
         right: 10px;
-        background-color: rgb(133, 235, 184);
-        color: green;
+        background-color:$background-color-new-tag;
+        color: $text-color-new-tag;
     }
     &__title{
-        margin-top: 13px;
+        margin-top: 0;
         margin-bottom: 0;
         @include title-card;
         padding-left: $padding-left-restaurant-card;
     }
     &__location{
-        margin: 0;
         font-size: 1.2rem;
         margin-top: 2px;
+        margin-bottom: 10px;
         padding-left: $padding-left-restaurant-card;
     }
     .fa-heart{
         position: absolute;
         font-size: 1.3rem;
-        -webkit-text-stroke: 1px white;
-        right: 20px;
+        transform: scaleY(1.1);
+        -webkit-text-stroke: 0.5px white;
+        right: 25px;
         bottom: 30px;
     }
 }
 
-img{
-    width: 50px;
-    height: 35px;
+footer{
+    background-color: $background-color-footer;
+    color: white;
+    padding-left: $padding-left-sections;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    img{
+        filter: invert(100%);
+        transform-origin: top left;
+        transform: scale(0.5);
+        border:1px solid white;
+    }
+    .footer__menu{
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            display: inline-block;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: white;
+            width: 20%;
+            min-width: 300px;
+            margin-bottom: 4px;
+            i{
+                font-size: 0.8rem;
+            }
+            p{
+                display: inline;
+                padding-left: 5px;
+            }
+        }
+    }
 }
