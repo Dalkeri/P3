@@ -1,34 +1,17 @@
-@import "./Utils/variables";
-@import "./Utils/mixins.scss";
+@import "./1-Base/body";
 
-body{
-    margin: auto;
-    max-width: 1280px;
-}
+@import "./2-Utils/variables";
+@import "./2-Utils/mixins";
 
-//mixin pour le header et footer car ils se repetent sur chaque page
-header{
-    height: 64px;
-    border-bottom: 2px solid rgba(0,0,0,0.2);
-    h1{
-        margin: 0;
-        height: 100%;
-        img{
-            // border:1px solid black;
-            width: 155px;
-            height: 100%;
-            padding-top: 5px;
-            margin: auto;
-            display: block;
-        }
-    }
-}
+//répétitions
+@import "./3-Layout/header";
+@import "./3-Layout/footer";
+
+
 
 .address{
     background-color: $background-color-address;
     height: 37px;
-    // padding-left: 26%;
-    // margin:auto;
     padding-top: 12px;
     text-align: center;
     &__elements{
@@ -64,28 +47,26 @@ header{
         line-height: 1.1em;
         margin-bottom: 46px;
     }
-}
-.explore__button{
-    font-size: 1.1rem;
-    border-radius: 25px 25px 25px 25px;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
-    @include button-shadow;
-    padding: 15px 20px 15px 20px;
+    &__button{
+        @include buttonConfiguration;
+        // padding: 15px 20px 15px 20px;
+        width: 220px;
+    }
+
 }
 
 .howtodo{
     padding-bottom: 40px;
     padding-top: 20px;
     padding-left: $padding-left-sections;
+    padding-right: $padding-left-sections;
     h2{
         @include title-h2;
         // margin-top: 45px;
         margin-bottom: 28px;
     }
     &__cards{
-        margin-right:15px;
+        // margin-right:15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -93,8 +74,8 @@ header{
     }
 }
 .howtodo_card{
-    margin-bottom: 24px;
-    width: 96%;
+    margin-bottom: 24px; // override le margin-bottom de la mixin
+    width: 100%;
     margin-right:2%;
     margin-left: 2%;
     max-width: 350px;
@@ -134,7 +115,9 @@ header{
 .restaurants{
     background-color: $background-color-light-grey;
     padding-top: 30px;
-    padding-left: $padding-left-sections;
+    // padding-left: $padding-left-sections;
+    padding-left: 4%;
+    padding-right: 4%;
     padding-bottom: 50px;
     h2{
         @include title-h2;
@@ -143,24 +126,19 @@ header{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        
     }
 }
 
 .restaurantCard{
-    width: 95%;
-    // border:1px solid black;
-    max-width: 350px;
     justify-content: center;
     height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 16px;
-    margin-right: 4%;
-    background-color: white;
-    border-radius: 15px;
-    @include light-shadow;
-    position: relative;
+    margin-right: 1%;
+    margin-left: 1%;
+    @include cardConfiguration;
+
     &__img{
         object-fit: cover;
         // object-position: 100% 150%;
@@ -196,45 +174,104 @@ header{
         padding-left: $padding-left-restaurant-card;
     }
     .fa-heart{
+        @include heart;
         position: absolute;
-        font-size: 1.3rem;
-        transform: scaleY(1.1);
-        -webkit-text-stroke: 0.5px white;
         right: 25px;
         bottom: 30px;
     }
 }
 
-footer{
-    background-color: $background-color-footer;
-    color: white;
-    padding-left: $padding-left-sections;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    img{
-        filter: invert(100%);
-        transform-origin: top left;
-        transform: scale(0.5);        
-    }
-    .footer__menu{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        a{
-            display: inline;
-            font-size: 1.1rem;
-            text-decoration: none;
-            color: white;
-            width: 20%;
-            min-width: 200px;
-            margin-bottom: 4px;
-            i{
-                font-size: 0.8rem;
-            }
-            p{
-                display: inline;
-                padding-left: 5px;
-            }
+
+
+
+
+
+
+.btn_return{
+    position: absolute;
+    left: 5%;
+    top: 25px;
+    background-color: red;
+}
+
+.image_top{
+    h1{
+        margin: 0;
+        img{
+            object-fit: cover;
+            // border:5px solid blue;
+            width: 100%;
+            height: 250px;
+            position: relative;
+            z-index: -1;
         }
     }
 }
+
+.main{
+    margin-top: -30px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: white;
+    position: relative;
+    border:4px solid blue;
+    background-color: $background-color-light-grey;
+    margin-bottom: 50px;
+    .main_header{
+        // border:1px solid black;
+        padding-top: 20px;
+        h2{
+            // border:1px solid black;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            margin-left: 20px;
+            display: inline;
+        }
+        .fa-heart{
+            @include heart;
+            right: 20px;
+            position: absolute;
+            right: 5%;
+        }
+    }
+    &__button{
+        @include buttonConfiguration;
+        // padding: 10px 20px 10px 20px;
+        width: 180px;
+        margin-left: calc(50% - 90px);
+    }
+}
+// .btn{
+//     border:1px solid black;
+// }
+.menu__cards{
+    // border:2px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid black;
+}
+
+.menu_category{
+    width:95%;
+    // border:1px solid black;
+}
+
+
+.menuCard{
+    display: block;
+    // max-width: 350px;
+    height: 75px;
+    // margin-right: 0;
+    @include cardConfiguration;
+    &__title{
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+

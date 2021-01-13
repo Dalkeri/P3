@@ -19,6 +19,40 @@ header h1 img {
   display: block;
 }
 
+footer {
+  background-color: #353535;
+  color: white;
+  padding-left: 4%;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+footer img {
+  filter: invert(100%);
+  transform-origin: top left;
+  transform: scale(0.5);
+}
+footer .footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+footer .footer__menu a {
+  display: inline;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  width: 20%;
+  min-width: 200px;
+  margin-bottom: 4px;
+}
+footer .footer__menu a i {
+  font-size: 0.8rem;
+}
+footer .footer__menu a p {
+  display: inline;
+  padding-left: 5px;
+}
+
 .address {
   background-color: #eaeaea;
   height: 37px;
@@ -59,21 +93,25 @@ header h1 img {
   line-height: 1.1em;
   margin-bottom: 46px;
 }
-
 .explore__button {
   font-size: 1.1rem;
   border-radius: 25px 25px 25px 25px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
   text-decoration: none;
+  text-align: center;
   color: white;
   background: linear-gradient(to bottom, #e872da, #a65cdb);
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
-  padding: 15px 20px 15px 20px;
+  width: 220px;
 }
 
 .howtodo {
   padding-bottom: 40px;
   padding-top: 20px;
-  padding-left: 6%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .howtodo h2 {
   font-size: 1.7rem;
@@ -81,7 +119,6 @@ header h1 img {
   margin-bottom: 28px;
 }
 .howtodo__cards {
-  margin-right: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -89,7 +126,7 @@ header h1 img {
 
 .howtodo_card {
   margin-bottom: 24px;
-  width: 96%;
+  width: 100%;
   margin-right: 2%;
   margin-left: 2%;
   max-width: 350px;
@@ -128,7 +165,8 @@ header h1 img {
 .restaurants {
   background-color: #f6f6f6;
   padding-top: 30px;
-  padding-left: 6%;
+  padding-left: 4%;
+  padding-right: 4%;
   padding-bottom: 50px;
 }
 .restaurants h2 {
@@ -142,19 +180,20 @@ header h1 img {
 }
 
 .restaurantCard {
-  width: 95%;
-  max-width: 350px;
   justify-content: center;
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  margin-right: 1%;
+  margin-left: 1%;
+  cursor: pointer;
+  width: 96%;
+  max-width: 350px;
   margin-bottom: 16px;
-  margin-right: 4%;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
   position: relative;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
 }
 .restaurantCard__img {
   object-fit: cover;
@@ -190,50 +229,98 @@ header h1 img {
   padding-left: 3%;
 }
 .restaurantCard .fa-heart {
-  position: absolute;
   font-size: 1.3rem;
   transform: scaleY(1.1);
   -webkit-text-stroke: 0.5px white;
+  position: absolute;
   right: 25px;
   bottom: 30px;
 }
 
-footer {
-  background-color: #353535;
-  color: white;
-  padding-left: 6%;
-  padding-top: 25px;
-  padding-bottom: 30px;
+.btn_return {
+  position: absolute;
+  left: 5%;
+  top: 25px;
+  background-color: red;
 }
-footer .logo_footer {
+
+.image_top h1 {
+  margin: 0;
+}
+.image_top h1 img {
+  object-fit: cover;
   width: 100%;
-  display: flex;
+  height: 250px;
+  position: relative;
+  z-index: -1;
 }
-footer img {
-  filter: invert(100%);
-  transform-origin: top left;
-  transform: scale(0.5);
+
+.main {
+  margin-top: -30px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: white;
+  position: relative;
+  border: 4px solid blue;
+  background-color: #f6f6f6;
+  margin-bottom: 50px;
 }
-footer .footer__menu {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.main .main_header {
+  padding-top: 20px;
 }
-footer .footer__menu a {
+.main .main_header h2 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-left: 20px;
   display: inline;
+}
+.main .main_header .fa-heart {
+  font-size: 1.3rem;
+  transform: scaleY(1.1);
+  -webkit-text-stroke: 0.5px white;
+  right: 20px;
+  position: absolute;
+  right: 5%;
+}
+.main__button {
   font-size: 1.1rem;
+  border-radius: 25px 25px 25px 25px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
   text-decoration: none;
+  text-align: center;
   color: white;
-  width: 20%;
-  min-width: 200px;
-  margin-bottom: 4px;
+  background: linear-gradient(to bottom, #e872da, #a65cdb);
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  margin-left: calc(50% - 90px);
 }
-footer .footer__menu a i {
-  font-size: 0.8rem;
+
+.menu__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
 }
-footer .footer__menu a p {
-  display: inline;
-  padding-left: 5px;
+
+.menu_category {
+  width: 95%;
+}
+
+.menuCard {
+  display: block;
+  height: 75px;
+  cursor: pointer;
+  width: 96%;
+  max-width: 350px;
+  margin-bottom: 16px;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+}
+.menuCard__title {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
