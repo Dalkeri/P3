@@ -16,15 +16,14 @@
 
 .main{
     margin-top: -30px;
+    margin-bottom: 0;
     border-radius: 30px 30px 0px 0px;
-    background-color: white;
     position: relative;
-    border:4px solid blue;
+    // border:4px solid blue;
     background-color: $background-color-light-grey;
-    margin-bottom: 50px;
     .main_header{
         border:1px solid black;
-        padding-top: 30px;
+        padding-top: 33px;
         margin-bottom: 5px;
         h2{
             @include font-family-Shrikhand;
@@ -42,10 +41,15 @@
             right: 5%;
         }
     }
+}
+
+.order{
+    padding-top: 34px;
+    padding-bottom: 84px;
     &__button{
         @include buttonConfiguration;
         // padding: 10px 20px 10px 20px;
-        width: 180px;
+        width: 190px;
         margin-left: calc(50% - 90px);
     }
 }
@@ -61,11 +65,11 @@
 .menu_category{
     width:95%;
     // border:1px solid black;
-    padding-top: 12px;
+    padding-top: 9px;
     h3{
         font-weight: normal;
         font-size: 1rem;
-        margin-bottom: 24px;
+        margin-bottom: 23px;
         position: relative;
         &:after {
             content: "";
@@ -87,12 +91,13 @@
     @include cardConfiguration;
     &__title{
         font-weight: bold;
-        border:1px solid black;
+        // border:1px solid black;
         font-size: 1.1rem;
-        margin: 0 0 0 10px;
+        padding-top: 9px;
+        margin: 0 0 5px 10px;
     }
     &__info{
-        border:1px solid black;
+        // border:1px solid black;
         margin: 0 0 0 10px;
 
     }
