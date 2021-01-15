@@ -1,7 +1,8 @@
-@import "./1-Base/body";
-
 @import "./2-Utils/variables";
 @import "./2-Utils/mixins";
+
+
+@import "./1-Base/body";
 
 //répétitions
 @import "./3-Layout/header";

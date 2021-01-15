@@ -1,6 +1,17 @@
+@mixin font-family-Shrikhand{
+    font-family: 'Shrikhand', cursive;
+}
+@mixin font-family-Roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
 @mixin title-h2{
     font-size: 1.7rem;
     font-weight: bold;
+}
+@mixin title-h2-menu{
+    font-size: 1.6rem;
+    font-weight: normal;
 }
 
 @mixin title-card{
@@ -14,7 +25,7 @@
 
 @mixin heart{
     // position: absolute;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     transform: scaleY(1.1);
     -webkit-text-stroke: 0.5px white;
 }
