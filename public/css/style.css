@@ -43,8 +43,9 @@ footer .footer__menu {
   flex-wrap: wrap;
   width: 100%;
 }
-footer .footer__menu a {
+footer .footer__menu a, footer .footer__menu address {
   display: inline;
+  font-style: normal;
   font-size: 1.1rem;
   text-decoration: none;
   color: white;
@@ -52,10 +53,10 @@ footer .footer__menu a {
   min-width: 200px;
   margin-bottom: 4px;
 }
-footer .footer__menu a i {
+footer .footer__menu a i, footer .footer__menu address i {
   font-size: 0.8rem;
 }
-footer .footer__menu a p {
+footer .footer__menu a p, footer .footer__menu address p {
   display: inline;
   padding-left: 5px;
 }
@@ -75,7 +76,7 @@ footer .footer__menu a p {
   font-size: 1rem;
   margin-right: 15px;
 }
-.address__elements h2 {
+.address__elements p {
   display: inline;
   font-size: 1.1rem;
 }
@@ -238,16 +239,15 @@ footer .footer__menu a p {
 .restaurantCard .fa-heart {
   font-size: 1.4rem;
   transform: scaleY(1.1);
-  -webkit-text-stroke: 0.5px white;
   position: absolute;
   right: 25px;
   bottom: 30px;
 }
 
-.image_top h1 {
+.image_top {
   margin: 0;
 }
-.image_top h1 img {
+.image_top img {
   object-fit: cover;
   width: 100%;
   height: 65vw;
@@ -264,9 +264,9 @@ footer .footer__menu a p {
   background-color: #f6f6f6;
 }
 .main .main_header {
-  border: 1px solid black;
   padding-top: 33px;
   margin-bottom: 5px;
+  position: relative;
 }
 .main .main_header h2 {
   font-family: "Shrikhand", cursive;
@@ -276,14 +276,49 @@ footer .footer__menu a p {
   margin-left: 20px;
   display: inline;
 }
-.main .main_header .fa-heart {
-  border: 1px solid black;
+.main .main_header .heart {
   font-size: 1.4rem;
   transform: scaleY(1.1);
-  -webkit-text-stroke: 0.5px white;
-  right: 20px;
   position: absolute;
-  right: 5%;
+  display: inline;
+  right: 15%;
+  top: 40px;
+  z-index: 3;
+}
+.main .main_header .heart:hover > .white-square {
+  transform: translate(0px, -20px);
+}
+.main .main_header .heart:hover > .empty {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main .main_header .empty {
+  z-index: 2;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 500ms ease;
+}
+.main .main_header .white-square {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  opacity: 1;
+  z-index: 1;
+  transition: transform 500ms;
+}
+.main .main_header .full {
+  z-index: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0.9);
+  position: absolute;
+  transition: opacity 100ms;
+  /*, transform 500ms*/
 }
 
 .order {

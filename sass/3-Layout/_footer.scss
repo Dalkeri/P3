@@ -13,8 +13,9 @@ footer{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        a{
+        a, address{
             display: inline;
+            font-style: normal;
             font-size: 1.1rem;
             text-decoration: none;
             color: white;
