@@ -19,7 +19,6 @@
     position: relative;
     background-color: $background-color-light-grey;
     .main_header{
-        // border:1px solid black;
         padding-top: 33px;
         margin-bottom: 5px;
         position: relative;
@@ -81,20 +80,57 @@
 
 
 .menuCard{
-    display: block;
+    display: flex;
     // max-width: 350px;
     height: 66px;
     @include cardConfiguration;
-    &__title{
-        font-weight: bold;
-        // border:1px solid black;
-        font-size: 1.1rem;
-        padding-top: 9px;
-        margin: 0 0 5px 10px;
+    position: relative;
+    overflow: hidden;
+    &__text{
+        &__title{
+            font-weight: bold;
+            // border:1px solid black;
+            font-size: 1.1rem;
+            padding-top: 9px;
+            margin: 0 0 5px 10px;
+        }
+        &__info{
+            // border:1px solid black;
+            margin: 0 0 0 10px;
+        }
+        p{
+            border:1px solid black;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 280px;
+            transition: width 1000ms;
+        }
+        .price{
+            position: absolute;
+            font-weight: bold;
+            text-decoration: underline;
+            right: 20px;
+            bottom: 15px;
+            transition: transform 1000ms;
+        }
     }
-    &__info{
-        // border:1px solid black;
-        margin: 0 0 0 10px;
-
+    &:hover {
+        p{
+            width: 210px; //calc a la place  80% 210px calc(100% - $width-carre - 20px)
+        }
+        .price{
+            transform: translate(-60px, 0px);
+        }
+        .menuCard__notch {
+            transform: scaleX(1);
+            .icon {
+                visibility: visible;
+                transform: rotate(0deg);
+            }
+            .icon2 {
+                display: none;
+            }
+        }
     }
 }

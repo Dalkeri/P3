@@ -331,7 +331,7 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 
 .menuCard {
-  display: block;
+  display: flex;
   height: 66px;
   cursor: pointer;
   width: 96%;
@@ -341,15 +341,49 @@ footer .footer__menu a p, footer .footer__menu address p {
   border-radius: 15px;
   position: relative;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
-.menuCard__title {
+.menuCard__text__title {
   font-weight: bold;
   font-size: 1.1rem;
   padding-top: 9px;
   margin: 0 0 5px 10px;
 }
-.menuCard__info {
+.menuCard__text__info {
   margin: 0 0 0 10px;
+}
+.menuCard__text p {
+  border: 1px solid black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 280px;
+  transition: width 1000ms;
+}
+.menuCard__text .price {
+  position: absolute;
+  font-weight: bold;
+  text-decoration: underline;
+  right: 20px;
+  bottom: 15px;
+  transition: transform 1000ms;
+}
+.menuCard:hover p {
+  width: 210px;
+}
+.menuCard:hover .price {
+  transform: translate(-60px, 0px);
+}
+.menuCard:hover .menuCard__notch {
+  transform: scaleX(1);
+}
+.menuCard:hover .menuCard__notch .icon {
+  visibility: visible;
+  transform: rotate(0deg);
+}
+.menuCard:hover .menuCard__notch .icon2 {
+  display: none;
 }
 
 .heart {
@@ -410,6 +444,7 @@ footer .footer__menu a p, footer .footer__menu address p {
 
 .loader {
   z-index: 10;
+  position: fixed;
   margin: auto;
   height: 100vh;
   width: 100vw;
@@ -417,7 +452,6 @@ footer .footer__menu a p, footer .footer__menu address p {
   justify-content: center;
   align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
-  position: absolute;
   opacity: 1;
   animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards;
 }
@@ -518,6 +552,39 @@ footer .footer__menu a p, footer .footer__menu address p {
   to {
     transform: scale(0);
   }
+}
+.menuCard__notch {
+  position: absolute;
+  border-radius: 0px 20px 20px 0px;
+  display: inline-block;
+  left: 280px;
+  width: 60px;
+  height: 68px;
+  background-color: green;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 1000ms;
+}
+
+.icon {
+  position: absolute;
+  visibility: hidden;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  top: calc(50% - 1em / 2);
+  transform: rotate(360deg);
+  text-align: center;
+  transition: transform 1000ms;
+}
+
+.icon2 {
+  position: absolute;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  top: calc(50% - 1em / 2);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
