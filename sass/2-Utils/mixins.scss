@@ -23,13 +23,6 @@
     box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
 }
 
-@mixin heart{
-    // position: absolute;
-    font-size: 1.4rem;
-    transform: scaleY(1.1);
-    // -webkit-text-stroke: 0.5px white;
-}
-
 @mixin cardConfiguration{
     cursor: pointer;
     width: 96%;
@@ -52,5 +45,33 @@
     color: white;
     background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
     box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
-
 }
+
+//for loader
+@mixin createCircle($diameter: $diameter, $color: white, $border: $border){
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    position: absolute;
+       
+    @if $border == 0{
+      border-top: 5px solid white;
+    }
+    @else if $border == 1{
+      border-right: 5px solid white; 
+    }
+    @else if $border == 2{
+      border-bottom: 5px solid white; 
+    }
+    @else if $border == 3{
+      border-left: 5px solid white; 
+    }
+}
+
+@mixin rotateCircle($side, $duration: $duration){
+    animation-duration: $duration;
+    animation-name: $side;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+

@@ -1,0 +1,56 @@
+.heart{
+    font-size: 1.4rem;
+    transform: scaleY(1.1);
+    -webkit-text-stroke: 0.5px white;
+    
+    z-index: 3;
+    &:hover{
+        > .square{
+          transform: scaleY(0);
+        //   transform: translate(0px, -20px);
+        }
+        > .empty{
+            background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+            -webkit-background-clip: text;
+                    background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px black;
+        }
+      }
+}
+.empty{
+    z-index: 2;
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    transition: background 500ms ease;
+}
+.square{
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    opacity: 1;
+    z-index: 1;
+    transform: scaleY(1);
+    transform-origin: top center;
+    transition: transform 500ms;
+    &--white{
+        background-color: white;
+    }
+    &--grey{
+        background-color: $background-color-light-grey;
+    }
+}
+  
+.full{
+    z-index: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+    -webkit-background-clip: text;
+            background-clip: text;
+     -webkit-text-fill-color: transparent;  
+    transform: scale(0.9);
+    position: absolute;
+    transition: opacity 100ms;/*, transform 500ms*/
+}
