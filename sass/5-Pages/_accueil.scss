@@ -125,6 +125,8 @@
     height: 250px;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
     margin-right: 1%;
     margin-left: 1%;
     @include cardConfiguration;

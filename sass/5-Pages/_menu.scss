@@ -54,8 +54,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:1px solid black;
+    border:1px solid black;    
 }
+
 
 .menu_category{
     width:95%;
@@ -87,6 +88,10 @@
     position: relative;
     overflow: hidden;
     &__text{
+        // border:1px solid black;
+        width: calc(100% - 60px); //83% calc(100% - 20px)
+        transition: width 1000ms;
+
         &__title{
             font-weight: bold;
             // border:1px solid black;
@@ -103,7 +108,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            width: 280px;
+            width: 100%;
             transition: width 1000ms;
         }
         .price{
@@ -116,8 +121,8 @@
         }
     }
     &:hover {
-        p{
-            width: 210px; //calc a la place  80% 210px calc(100% - $width-carre - 20px)
+        .menuCard__text{ //p
+            width: 59%; //calc a la place  80% 210px calc(100% - $width-carre - 20px)
         }
         .price{
             transform: translate(-60px, 0px);
@@ -131,6 +136,14 @@
             .icon2 {
                 display: none;
             }
+        }
+    }
+}
+
+@media (max-width:374px){
+    .menuCard{
+        &__text{
+            font-size: 0.85rem;
         }
     }
 }

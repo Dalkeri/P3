@@ -194,6 +194,8 @@ footer .footer__menu a p, footer .footer__menu address p {
   height: 250px;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: black;
   margin-right: 1%;
   margin-left: 1%;
   cursor: pointer;
@@ -344,6 +346,10 @@ footer .footer__menu a p, footer .footer__menu address p {
   position: relative;
   overflow: hidden;
 }
+.menuCard__text {
+  width: calc(100% - 60px);
+  transition: width 1000ms;
+}
 .menuCard__text__title {
   font-weight: bold;
   font-size: 1.1rem;
@@ -358,7 +364,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 280px;
+  width: 100%;
   transition: width 1000ms;
 }
 .menuCard__text .price {
@@ -369,8 +375,8 @@ footer .footer__menu a p, footer .footer__menu address p {
   bottom: 15px;
   transition: transform 1000ms;
 }
-.menuCard:hover p {
-  width: 210px;
+.menuCard:hover .menuCard__text {
+  width: 59%;
 }
 .menuCard:hover .price {
   transform: translate(-60px, 0px);
@@ -386,6 +392,11 @@ footer .footer__menu a p, footer .footer__menu address p {
   display: none;
 }
 
+@media (max-width: 374px) {
+  .menuCard__text {
+    font-size: 0.85rem;
+  }
+}
 .heart {
   font-size: 1.4rem;
   transform: scaleY(1.1);
@@ -557,7 +568,8 @@ footer .footer__menu a p, footer .footer__menu address p {
   position: absolute;
   border-radius: 0px 20px 20px 0px;
   display: inline-block;
-  left: 280px;
+  left: 83%;
+  top: 0px;
   width: 60px;
   height: 68px;
   background-color: green;
