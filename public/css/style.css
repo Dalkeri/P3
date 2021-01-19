@@ -1,170 +1,3 @@
-.heart {
-  font-size: 1.4rem;
-  transform: scaleY(1.1);
-  -webkit-text-stroke: 0.5px white;
-  z-index: 3;
-}
-.heart:hover > .square {
-  transform: scaleY(0);
-}
-.heart:hover > .empty {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0px black;
-}
-
-.empty {
-  z-index: 2;
-  position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background 500ms ease;
-}
-
-.square {
-  position: absolute;
-  width: 21px;
-  height: 20px;
-  opacity: 1;
-  z-index: 1;
-  transform: scaleY(1);
-  transform-origin: top center;
-  transition: transform 500ms;
-}
-.square--white {
-  background-color: white;
-}
-.square--grey {
-  background-color: #f6f6f6;
-}
-
-.full {
-  z-index: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(0.9);
-  position: absolute;
-  transition: opacity 100ms;
-  /*, transform 500ms*/
-}
-
-.loader {
-  z-index: 10;
-  margin: auto;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
-  position: absolute;
-  opacity: 1;
-  animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards;
-}
-
-.text {
-  color: white;
-  font-size: 1 rem;
-}
-
-.circle1 {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  position: absolute;
-  border-top: 5px solid white;
-  animation-duration: 1.5s;
-  animation-name: rotateLR;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.circle2 {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: absolute;
-  border-right: 5px solid white;
-  animation-duration: 1.5s;
-  animation-name: rotateRL;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.circle3 {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  position: absolute;
-  border-bottom: 5px solid white;
-  animation-duration: 1.5s;
-  animation-name: rotateLR;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.circle4 {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  position: absolute;
-  border-top: 5px solid white;
-  animation-duration: 1.5s;
-  animation-name: rotateRL;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.circle5 {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  position: absolute;
-  border-right: 5px solid white;
-  animation-duration: 1.5s;
-  animation-name: rotateLR;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotateLR {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotateRL {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes opacityDown {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes scaleDown {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
 body {
   margin: auto;
   max-width: 1280px;
@@ -517,6 +350,174 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 .menuCard__info {
   margin: 0 0 0 10px;
+}
+
+.heart {
+  font-size: 1.4rem;
+  transform: scaleY(1.1);
+  -webkit-text-stroke: 0.5px white;
+  z-index: 3;
+}
+.heart:hover > .square {
+  transform: scaleY(0);
+}
+.heart:hover > .empty {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px black;
+}
+
+.empty {
+  z-index: 2;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 500ms ease;
+}
+
+.square {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  opacity: 1;
+  z-index: 1;
+  transform: scaleY(1);
+  transform-origin: top center;
+  transition: transform 500ms;
+}
+.square--white {
+  background-color: white;
+}
+.square--grey {
+  background-color: #f6f6f6;
+}
+
+.full {
+  z-index: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0.9);
+  position: absolute;
+  transition: opacity 100ms;
+  /*, transform 500ms*/
+}
+
+.loader {
+  z-index: 10;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  position: absolute;
+  opacity: 1;
+  animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards;
+}
+
+.text {
+  color: white;
+  font-size: 1 rem;
+}
+
+.circle1 {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  position: absolute;
+  border-top: 5px solid white;
+  animation-duration: 1.5s;
+  animation-name: rotateLR;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  border-right: 5px solid white;
+  animation-duration: 1.5s;
+  animation-name: rotateRL;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle3 {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: absolute;
+  border-bottom: 5px solid white;
+  animation-duration: 1.5s;
+  animation-name: rotateLR;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle4 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  border-top: 5px solid white;
+  animation-duration: 1.5s;
+  animation-name: rotateRL;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle5 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: absolute;
+  border-right: 5px solid white;
+  animation-duration: 1.5s;
+  animation-name: rotateLR;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateLR {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateRL {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes opacityDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

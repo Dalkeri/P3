@@ -1,8 +1,7 @@
 @import "./2-Utils/variables";
 @import "./2-Utils/mixins";
 
-@import "./4-Components/heart";
-@import "./4-Components/loader";
+
 
 @import "./1-Base/body";
 
@@ -13,3 +12,6 @@
 //pages du site
 @import "./5-Pages/accueil";
 @import "./5-Pages/menu";
+
+@import "./4-Components/heart";
+@import "./4-Components/loader";
