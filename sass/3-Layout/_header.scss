@@ -15,9 +15,10 @@ header{
         }
     }
     .btn_return{
-    position: absolute;
-    left: 5%;
-    top: 25px;
-    background-color: red;
-}
+        display: block;
+        position: absolute;
+        color: black;
+        left: 5%;
+        top: 25px;
+    }
 }

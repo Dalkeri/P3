@@ -22,10 +22,11 @@ header h1 img {
   display: block;
 }
 header .btn_return {
+  display: block;
   position: absolute;
+  color: black;
   left: 5%;
   top: 25px;
-  background-color: red;
 }
 
 footer {
@@ -198,8 +199,6 @@ footer .footer__menu a p, footer .footer__menu address p {
   color: black;
   margin-right: 1%;
   margin-left: 1%;
-  cursor: pointer;
-  width: 96%;
   max-width: 350px;
   margin-bottom: 16px;
   background-color: white;
@@ -335,8 +334,6 @@ footer .footer__menu a p, footer .footer__menu address p {
 .menuCard {
   display: flex;
   height: 66px;
-  cursor: pointer;
-  width: 96%;
   max-width: 350px;
   margin-bottom: 16px;
   background-color: white;
@@ -385,18 +382,9 @@ footer .footer__menu a p, footer .footer__menu address p {
   transform: scaleX(1);
 }
 .menuCard:hover .menuCard__notch .icon {
-  visibility: visible;
-  transform: rotate(0deg);
-}
-.menuCard:hover .menuCard__notch .icon2 {
-  display: none;
+  animation: test 1s forwards;
 }
 
-@media (max-width: 374px) {
-  .menuCard__text {
-    font-size: 0.85rem;
-  }
-}
 .heart {
   font-size: 1.4rem;
   transform: scaleY(1.1);
@@ -568,7 +556,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   position: absolute;
   border-radius: 0px 20px 20px 0px;
   display: inline-block;
-  left: 83%;
+  right: 0;
   top: 0px;
   width: 60px;
   height: 68px;
@@ -580,23 +568,21 @@ footer .footer__menu a p, footer .footer__menu address p {
 
 .icon {
   position: absolute;
-  visibility: hidden;
   color: white;
   font-size: 1em;
   width: 100%;
   top: calc(50% - 1em / 2);
   transform: rotate(360deg);
   text-align: center;
-  transition: transform 1000ms;
 }
 
-.icon2 {
-  position: absolute;
-  color: white;
-  font-size: 1em;
-  width: 100%;
-  top: calc(50% - 1em / 2);
-  text-align: center;
+@keyframes test {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

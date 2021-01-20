@@ -1,9 +1,8 @@
 .menuCard__notch {
     position: absolute;
-    // border:1px solid black;
     border-radius: 0px 20px 20px 0px;
     display: inline-block;
-    left: 83%;
+    right: 0;
     top: 0px;
     width: $width-carre;
     height: $height-card;
@@ -15,22 +14,31 @@
   
 .icon {
     position: absolute;
-    visibility: hidden;
+    // visibility: hidden;
     color: white;
     font-size: 1em;
     width: 100%;
     top: calc(50% - 1em / 2);
     transform: rotate(360deg);
     text-align: center;
-    transition: transform 1000ms;
 }
-  
-.icon2 {
-    position: absolute;
-    color: white;
-    font-size: 1em;
-    width: 100%;
-    top: calc(50% - 1em / 2);
-    text-align: center;
+
+@keyframes test{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
 }
+
+
+// .icon2 {
+//     position: absolute;
+//     color: white;
+//     font-size: 1em;
+//     width: 100%;
+//     top: calc(50% - 1em / 2);
+//     text-align: center;
+// }
   

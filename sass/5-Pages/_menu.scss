@@ -120,7 +120,7 @@
             transition: transform 1000ms;
         }
     }
-    &:hover {
+    &:hover {   //:hover__text
         .menuCard__text{ //p
             width: 59%; //calc a la place  80% 210px calc(100% - $width-carre - 20px)
         }
@@ -129,21 +129,10 @@
         }
         .menuCard__notch {
             transform: scaleX(1);
-            .icon {
-                visibility: visible;
-                transform: rotate(0deg);
-            }
-            .icon2 {
-                display: none;
+            .icon{
+                animation: test 1s forwards;
             }
         }
     }
 }
 
-@media (max-width:374px){
-    .menuCard{
-        &__text{
-            font-size: 0.85rem;
-        }
-    }
-}
