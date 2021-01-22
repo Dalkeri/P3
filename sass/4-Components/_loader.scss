@@ -1,3 +1,5 @@
+//contient toute l'animation du loader
+
 .loader{
     // border:1px solid black;
     z-index: 10;
@@ -11,7 +13,8 @@
     align-items: center;
     background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white)); 
     opacity: 1;
-    animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards; 
+    animation: test 2s 3s forwards; 
+    // animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards; 
 
 }
   
@@ -58,20 +61,37 @@
     }
 }
 
-@keyframes opacityDown{
-    from{
-      opacity: 1;
-    }
-    to{
-      opacity: 0;
-    }
-}
-@keyframes scaleDown{
-    from{
-      transform: scale(1);
-    }
-    to{
-      transform: scale(0);
-    }
-}
+// @keyframes opacityDown{
+//   from{
+//     opacity: 1;
+//   }
+//   to{
+//     opacity: 0;
+//   }
+// }
+// @keyframes scaleDown{
+//   from{
+//     transform: scale(1);
+//   }
+//   to{
+//     transform: scale(0);
+//   }
+// }
 
+@keyframes test{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    // display: none;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+}

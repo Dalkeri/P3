@@ -1,3 +1,28 @@
+//contient toute l'animation notch
+
+.menuCard{
+    &__text{
+        transition: width 1000ms;
+        .price{
+            transition: transform 1000ms;
+        }
+    }
+    &:hover {
+        .menuCard__text{ 
+            width: 59%; //calc a la place  80% 210px calc(100% - $width-carre - 20px)
+        }
+        .price{
+            transform: translate(-60px, 0px);
+        }
+        .menuCard__notch {
+            transform: scaleX(1);
+            .icon{
+                animation: rotation 1s forwards;
+            }
+        }
+    }
+}
+
 .menuCard__notch {
     position: absolute;
     border-radius: 0px 20px 20px 0px;
@@ -6,7 +31,7 @@
     top: 0px;
     width: $width-carre;
     height: $height-card;
-    background-color: green;
+    background-color: $color-green-notch;
     transform-origin: center right;
     transform: scaleX(0);
     transition: transform 1000ms;
@@ -14,7 +39,6 @@
   
 .icon {
     position: absolute;
-    // visibility: hidden;
     color: white;
     font-size: 1em;
     width: 100%;
@@ -23,7 +47,7 @@
     text-align: center;
 }
 
-@keyframes test{
+@keyframes rotation{
     from{
         transform: rotate(360deg);
     }

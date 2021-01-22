@@ -50,22 +50,26 @@
 }
 
 .menu__cards{
-    // border:2px solid blue;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    border:1px solid black;    
+    justify-content: center;
+    // border:2px solid blue;    
 }
 
-
 .menu_category{
-    width:95%;
+    width:100%;
+    max-width: 375px;
     // border:1px solid black;
+    display: flex;
+    flex-direction: column;
     padding-top: 9px;
     h3{
         font-weight: normal;
         font-size: 1rem;
         margin-bottom: 23px;
+        margin-left: 20px;
         position: relative;
         &:after {
             content: "";
@@ -82,56 +86,36 @@
 
 .menuCard{
     display: flex;
-    // max-width: 350px;
     height: 66px;
+    width: 95%;
+    margin: auto;
     @include cardConfiguration;
     position: relative;
     overflow: hidden;
     &__text{
-        // border:1px solid black;
         width: calc(100% - 60px); //83% calc(100% - 20px)
-        transition: width 1000ms;
-
         &__title{
             font-weight: bold;
-            // border:1px solid black;
             font-size: 1.1rem;
             padding-top: 9px;
             margin: 0 0 5px 10px;
         }
         &__info{
-            // border:1px solid black;
             margin: 0 0 0 10px;
         }
         p{
-            border:1px solid black;
+            // border:1px solid black;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
-            transition: width 1000ms;
         }
         .price{
             position: absolute;
             font-weight: bold;
-            text-decoration: underline;
+            text-decoration: none;
             right: 20px;
             bottom: 15px;
-            transition: transform 1000ms;
-        }
-    }
-    &:hover {   //:hover__text
-        .menuCard__text{ //p
-            width: 59%; //calc a la place  80% 210px calc(100% - $width-carre - 20px)
-        }
-        .price{
-            transform: translate(-60px, 0px);
-        }
-        .menuCard__notch {
-            transform: scaleX(1);
-            .icon{
-                animation: test 1s forwards;
-            }
         }
     }
 }

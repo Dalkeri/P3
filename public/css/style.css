@@ -25,8 +25,9 @@ header .btn_return {
   display: block;
   position: absolute;
   color: black;
-  left: 5%;
+  left: 6%;
   top: 25px;
+  font-size: 1.2rem;
 }
 
 footer {
@@ -306,19 +307,24 @@ footer .footer__menu a p, footer .footer__menu address p {
 
 .menu__cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  border: 1px solid black;
+  justify-content: center;
 }
 
 .menu_category {
-  width: 95%;
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
   padding-top: 9px;
 }
 .menu_category h3 {
   font-weight: normal;
   font-size: 1rem;
   margin-bottom: 23px;
+  margin-left: 20px;
   position: relative;
 }
 .menu_category h3:after {
@@ -334,6 +340,8 @@ footer .footer__menu a p, footer .footer__menu address p {
 .menuCard {
   display: flex;
   height: 66px;
+  width: 95%;
+  margin: auto;
   max-width: 350px;
   margin-bottom: 16px;
   background-color: white;
@@ -345,7 +353,6 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 .menuCard__text {
   width: calc(100% - 60px);
-  transition: width 1000ms;
 }
 .menuCard__text__title {
   font-weight: bold;
@@ -357,32 +364,17 @@ footer .footer__menu a p, footer .footer__menu address p {
   margin: 0 0 0 10px;
 }
 .menuCard__text p {
-  border: 1px solid black;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  transition: width 1000ms;
 }
 .menuCard__text .price {
   position: absolute;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   right: 20px;
   bottom: 15px;
-  transition: transform 1000ms;
-}
-.menuCard:hover .menuCard__text {
-  width: 59%;
-}
-.menuCard:hover .price {
-  transform: translate(-60px, 0px);
-}
-.menuCard:hover .menuCard__notch {
-  transform: scaleX(1);
-}
-.menuCard:hover .menuCard__notch .icon {
-  animation: test 1s forwards;
 }
 
 .heart {
@@ -452,7 +444,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
   opacity: 1;
-  animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards;
+  animation: test 2s 3s forwards;
 }
 
 .text {
@@ -536,22 +528,40 @@ footer .footer__menu a p, footer .footer__menu address p {
     transform: rotate(0deg);
   }
 }
-@keyframes opacityDown {
-  from {
+@keyframes test {
+  0% {
     opacity: 1;
   }
-  to {
-    opacity: 0;
+  50% {
+    opacity: 0.5;
   }
-}
-@keyframes scaleDown {
-  from {
+  99% {
     transform: scale(1);
   }
-  to {
+  100% {
+    opacity: 0;
     transform: scale(0);
   }
 }
+.menuCard__text {
+  transition: width 1000ms;
+}
+.menuCard__text .price {
+  transition: transform 1000ms;
+}
+.menuCard:hover .menuCard__text {
+  width: 59%;
+}
+.menuCard:hover .price {
+  transform: translate(-60px, 0px);
+}
+.menuCard:hover .menuCard__notch {
+  transform: scaleX(1);
+}
+.menuCard:hover .menuCard__notch .icon {
+  animation: rotation 1s forwards;
+}
+
 .menuCard__notch {
   position: absolute;
   border-radius: 0px 20px 20px 0px;
@@ -560,7 +570,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   top: 0px;
   width: 60px;
   height: 68px;
-  background-color: green;
+  background-color: #99e2d0;
   transform-origin: center right;
   transform: scaleX(0);
   transition: transform 1000ms;
@@ -576,7 +586,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   text-align: center;
 }
 
-@keyframes test {
+@keyframes rotation {
   from {
     transform: rotate(360deg);
   }
