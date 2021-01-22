@@ -48,7 +48,7 @@
 }
 
 //for loader
-@mixin createCircle($diameter: $diameter, $color: white, $border: $border){
+@mixin createCircle($diameter: $diameter, $border: $border){
     width: $diameter;
     height: $diameter;
     border-radius: 50%;
@@ -75,3 +75,13 @@
     animation-iteration-count: infinite;
 }
 
+
+// appear in menu
+@mixin appearConfig($animationDelay: $delay) {
+    animation-duration: $duration;
+    animation-name: appear;
+    // animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: $animationDelay;
+    // animation-iteration-count: infinite;
+  }

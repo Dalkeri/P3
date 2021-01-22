@@ -7,7 +7,6 @@ body {
 header {
   height: 64px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  border: 1px solid black;
   position: relative;
 }
 header h1 {
@@ -155,9 +154,9 @@ footer .footer__menu a p, footer .footer__menu address p {
   background-color: #9356dc;
   border-radius: 20px 20px 20px 20px;
   color: white;
-  padding-top: 5px;
+  padding-top: 3px;
   width: 25px;
-  height: 20px;
+  height: 21px;
   text-align: center;
 }
 .howtodo_card__icon {
@@ -444,7 +443,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
   opacity: 1;
-  animation: test 2s 3s forwards;
+  animation: vanish 2s 3s forwards;
 }
 
 .text {
@@ -458,7 +457,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   border-radius: 50%;
   position: absolute;
   border-top: 5px solid white;
-  animation-duration: 1.5s;
+  animation-duration: 2500ms;
   animation-name: rotateLR;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -470,43 +469,43 @@ footer .footer__menu a p, footer .footer__menu address p {
   border-radius: 50%;
   position: absolute;
   border-right: 5px solid white;
-  animation-duration: 1.5s;
+  animation-duration: 2500ms;
   animation-name: rotateRL;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 .circle3 {
-  width: 110px;
-  height: 110px;
+  width: 115px;
+  height: 115px;
   border-radius: 50%;
   position: absolute;
   border-bottom: 5px solid white;
-  animation-duration: 1.5s;
+  animation-duration: 2500ms;
   animation-name: rotateLR;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 .circle4 {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   position: absolute;
   border-top: 5px solid white;
-  animation-duration: 1.5s;
+  animation-duration: 2500ms;
   animation-name: rotateRL;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 .circle5 {
-  width: 130px;
-  height: 130px;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
   position: absolute;
   border-right: 5px solid white;
-  animation-duration: 1.5s;
+  animation-duration: 2500ms;
   animation-name: rotateLR;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -528,7 +527,7 @@ footer .footer__menu a p, footer .footer__menu address p {
     transform: rotate(0deg);
   }
 }
-@keyframes test {
+@keyframes vanish {
   0% {
     opacity: 1;
   }
@@ -564,7 +563,7 @@ footer .footer__menu a p, footer .footer__menu address p {
 
 .menuCard__notch {
   position: absolute;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 15px 15px 0px;
   display: inline-block;
   right: 0;
   top: 0px;
@@ -592,6 +591,44 @@ footer .footer__menu a p, footer .footer__menu address p {
   }
   to {
     transform: rotate(0deg);
+  }
+}
+.menu_category {
+  margin-bottom: 20px;
+}
+.menu_category .menuCard {
+  opacity: 0;
+  top: 20px;
+}
+
+.card1 {
+  animation-duration: 2500ms;
+  animation-name: appear;
+  animation-fill-mode: forwards;
+  animation-delay: 0ms;
+}
+
+.card2 {
+  animation-duration: 2500ms;
+  animation-name: appear;
+  animation-fill-mode: forwards;
+  animation-delay: 500ms;
+}
+
+.card3 {
+  animation-duration: 2500ms;
+  animation-name: appear;
+  animation-fill-mode: forwards;
+  animation-delay: 1000ms;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
   }
 }
 
