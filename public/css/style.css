@@ -1,7 +1,11 @@
 body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.content {
   margin: auto;
   max-width: 1280px;
-  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -271,7 +275,7 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 .main .main_header h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: normal;
   margin-top: 30px;
   margin-left: 20px;
@@ -360,6 +364,7 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 .menuCard__text__info {
   margin: 0 0 0 10px;
+  font-size: 0.95rem;
 }
 .menuCard__text p {
   text-overflow: ellipsis;
@@ -385,9 +390,8 @@ footer .footer__menu a p, footer .footer__menu address p {
   transform: scaleY(0);
 }
 .heart:hover > .empty {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(#dad1d1));
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px black;
 }
@@ -397,7 +401,6 @@ footer .footer__menu a p, footer .footer__menu address p {
   position: absolute;
   background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background 500ms ease;
 }
@@ -423,7 +426,6 @@ footer .footer__menu a p, footer .footer__menu address p {
   z-index: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0.9);
   position: absolute;
@@ -440,19 +442,20 @@ footer .footer__menu a p, footer .footer__menu address p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#FF79DA));
   opacity: 1;
-  animation: vanish 2s 3s forwards;
+  animation: vanish 500ms 2s forwards;
+  font-family: "Shrikhand", cursive;
 }
 
 .text {
   color: white;
-  font-size: 1 rem;
+  font-size: 1rem;
 }
 
 .circle1 {
-  width: 85px;
-  height: 85px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   position: absolute;
   border-top: 5px solid white;
@@ -463,8 +466,8 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 
 .circle2 {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   position: absolute;
   border-right: 5px solid white;
@@ -475,8 +478,8 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 
 .circle3 {
-  width: 115px;
-  height: 115px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   position: absolute;
   border-bottom: 5px solid white;
@@ -487,8 +490,8 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 
 .circle4 {
-  width: 130px;
-  height: 130px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
   position: absolute;
   border-top: 5px solid white;
@@ -499,8 +502,8 @@ footer .footer__menu a p, footer .footer__menu address p {
 }
 
 .circle5 {
-  width: 145px;
-  height: 145px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   position: absolute;
   border-right: 5px solid white;

@@ -1,5 +1,9 @@
 body{
+   margin: 0;
+   @include font-family-Roboto;
+}
+.content{
     margin: auto;
     max-width: 1280px;
-    @include font-family-Roboto;
+    
 }

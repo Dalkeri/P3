@@ -1,45 +1,43 @@
 //contient toute l'animation du loader
 
 .loader{
-    // border:1px solid black;
     z-index: 10;
     position: fixed;
-    // position: absolute;
     margin: auto;
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white)); 
+    background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
     opacity: 1;
-    animation: vanish 2s 3s forwards; 
+    animation: vanish 500ms 2s forwards; 
     // animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards; 
-
+    @include font-family-Shrikhand;
 }
   
   .text{
     color: white;
-    font-size: 1 rem;
+    font-size: 1rem;
   }
   .circle1{
-    @include createCircle(85px, 0); 
+    @include createCircle(110px, 0); 
     @include rotateCircle(rotateLR);
   }
   .circle2{
-    @include createCircle(100px, 1);
+    @include createCircle(125px, 1);
     @include rotateCircle(rotateRL);
   }
   .circle3{
-    @include createCircle(115px, 2);
+    @include createCircle(140px, 2);
     @include rotateCircle(rotateLR);
   }
   .circle4{
-    @include createCircle(130px, 0);
+    @include createCircle(155px, 0);
     @include rotateCircle(rotateRL);
   }
   .circle5{
-    @include createCircle(145px, 1);
+    @include createCircle(170px, 1);
     @include rotateCircle(rotateLR);
   }
 
