@@ -17,6 +17,9 @@
   .card3 {
     @include appearConfig(1000ms);
   }
+  .card4 {
+    @include appearConfig(1500ms);
+  }
 
   @keyframes appear {
     from {

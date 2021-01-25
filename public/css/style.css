@@ -308,7 +308,6 @@ footer .footer__menu a p, footer .footer__menu address p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 }
 
@@ -620,6 +619,13 @@ footer .footer__menu a p, footer .footer__menu address p {
   animation-name: appear;
   animation-fill-mode: forwards;
   animation-delay: 1000ms;
+}
+
+.card4 {
+  animation-duration: 2500ms;
+  animation-name: appear;
+  animation-fill-mode: forwards;
+  animation-delay: 1500ms;
 }
 
 @keyframes appear {
