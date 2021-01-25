@@ -1,6 +1,11 @@
 //contient toute l'animation heart
 
 .heart{
+    position: absolute;
+    display: inline;
+    right: 16%; /*16% 65px*/
+    top: 40px;
+
     font-size: 1.4rem;
     transform: scaleY(1.1);
     -webkit-text-stroke: 0.5px white;
@@ -56,4 +61,10 @@
     transform: scale(0.9);
     position: absolute;
     transition: opacity 100ms;/*, transform 500ms*/
+}
+
+@media screen and (max-width: 333px){
+    .heart{
+        right: 10%;
+    }
 }
