@@ -2,9 +2,9 @@
 
 .menuCard{
     &__text{
-        transition: width 1000ms;
+        transition: width 500ms;
         .price{
-            transition: transform 1000ms;
+            transition: transform 500ms;
         }
     }
     &:hover {
@@ -17,7 +17,7 @@
         .menuCard__notch {
             transform: scaleX(1);
             .icon{
-                animation: rotation 1s forwards;
+                animation: rotation 500ms forwards;
             }
         }
     }
@@ -34,7 +34,7 @@
     background-color: $color-green-notch;
     transform-origin: center right;
     transform: scaleX(0);
-    transition: transform 1000ms;
+    transition: transform 500ms;
 }
   
 .icon {
@@ -49,10 +49,10 @@
 
 @keyframes rotation{
     from{
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
     to{
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 

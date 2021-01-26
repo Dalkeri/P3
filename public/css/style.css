@@ -551,10 +551,10 @@ footer .footer__menu a p, footer .footer__menu address p {
   }
 }
 .menuCard__text {
-  transition: width 1000ms;
+  transition: width 500ms;
 }
 .menuCard__text .price {
-  transition: transform 1000ms;
+  transition: transform 500ms;
 }
 .menuCard:hover .menuCard__text {
   width: 59%;
@@ -566,7 +566,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   transform: scaleX(1);
 }
 .menuCard:hover .menuCard__notch .icon {
-  animation: rotation 1s forwards;
+  animation: rotation 500ms forwards;
 }
 
 .menuCard__notch {
@@ -580,7 +580,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   background-color: #99e2d0;
   transform-origin: center right;
   transform: scaleX(0);
-  transition: transform 1000ms;
+  transition: transform 500ms;
 }
 
 .icon {
@@ -595,10 +595,10 @@ footer .footer__menu a p, footer .footer__menu address p {
 
 @keyframes rotation {
   from {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 .menu_category {
