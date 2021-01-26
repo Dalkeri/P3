@@ -246,7 +246,12 @@ footer .footer__menu a p, footer .footer__menu address p {
 .restaurantCard .heart {
   position: absolute;
   right: 47px;
+  top: auto;
   bottom: 53px;
+}
+.restaurantCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 25px black;
 }
 
 .image_top {

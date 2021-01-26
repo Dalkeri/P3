@@ -14,7 +14,6 @@
     &:hover{
         > .square{
           transform: scaleY(0);
-        //   transform: translate(0px, -20px);
         }
         > .empty{
             background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(rgb(218, 209, 209)));
