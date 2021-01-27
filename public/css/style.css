@@ -36,7 +36,6 @@ header .btn_return {
 footer {
   background-color: #353535;
   color: white;
-  padding-left: 4%;
   padding-top: 25px;
   padding-bottom: 30px;
 }
@@ -44,6 +43,7 @@ footer img {
   filter: invert(100%);
   transform-origin: top left;
   transform: scale(0.5);
+  margin-left: 4%;
 }
 footer .footer__menu {
   display: flex;
@@ -59,6 +59,7 @@ footer .footer__menu a, footer .footer__menu address {
   width: 20%;
   min-width: 200px;
   margin-bottom: 4px;
+  margin-left: 4%;
 }
 footer .footer__menu a i, footer .footer__menu address i {
   font-size: 0.8rem;
@@ -66,6 +67,9 @@ footer .footer__menu a i, footer .footer__menu address i {
 footer .footer__menu a p, footer .footer__menu address p {
   display: inline;
   padding-left: 5px;
+}
+footer .footer__menu a a, footer .footer__menu address a {
+  margin: 0;
 }
 
 .address {
@@ -92,21 +96,23 @@ footer .footer__menu a p, footer .footer__menu address p {
   text-align: center;
   background-color: #f6f6f6;
   padding-top: 37px;
-  padding-bottom: 71px;
+  padding-bottom: 60px;
 }
 .explore h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   width: 70%;
   margin: auto;
   margin-bottom: 11px;
-  line-height: 1.05em;
+  line-height: 1.8rem;
 }
 .explore p {
   margin-top: 0;
-  font-size: 1.3rem;
-  line-height: 1.1em;
-  margin-bottom: 46px;
+  margin-bottom: 30px;
+  margin-right: 3.5%;
+  margin-left: 3.5%;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
 }
 .explore__button {
   font-size: 1rem;
@@ -121,15 +127,19 @@ footer .footer__menu a p, footer .footer__menu address p {
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
   width: 220px;
 }
+.explore__button:hover {
+  background: linear-gradient(to bottom, #ec88e0, #b171e0);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+}
 
 .howtodo {
   padding-bottom: 40px;
-  padding-top: 20px;
+  padding-top: 23px;
   padding-left: 4%;
   padding-right: 4%;
 }
 .howtodo h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 28px;
 }
@@ -151,6 +161,9 @@ footer .footer__menu a p, footer .footer__menu address p {
   padding-top: 29px;
   border-radius: 15px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+}
+.howtodo_card--lightpink {
+  background-color: #f5edff;
 }
 .howtodo_card__number {
   position: absolute;
@@ -185,7 +198,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   padding-bottom: 50px;
 }
 .restaurants h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .restaurants__cards {
@@ -227,7 +240,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   padding: 5px 10px 5px 10px;
   top: 10px;
   right: 10px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #30a387;
 }
 .restaurantCard__title {
@@ -308,6 +321,10 @@ footer .footer__menu a p, footer .footer__menu address p {
   width: 190px;
   margin-left: calc(50% - 90px);
 }
+.order__button:hover {
+  background: linear-gradient(to bottom, #ec88e0, #b171e0);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+}
 
 .menu__cards {
   display: flex;
@@ -337,14 +354,14 @@ footer .footer__menu a p, footer .footer__menu address p {
   bottom: -5px;
   height: 15px;
   width: 3rem;
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
 }
 
 .menuCard {
   display: flex;
   height: 66px;
   width: 95%;
-  margin: auto;
+  margin-left: 3%;
   max-width: 350px;
   margin-bottom: 16px;
   background-color: white;
@@ -582,7 +599,7 @@ footer .footer__menu a p, footer .footer__menu address p {
   top: 0px;
   width: 60px;
   height: 68px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   transform-origin: center right;
   transform: scaleX(0);
   transition: transform 500ms;

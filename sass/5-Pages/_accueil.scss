@@ -23,19 +23,21 @@
     text-align: center;
     background-color: $background-color-light-grey;
     padding-top: 37px;
-    padding-bottom: 71px;
+    padding-bottom: 60px;
     h2{
         @include title-h2;
         width: 70%;
         margin:auto;
         margin-bottom: 11px;
-        line-height: 1.05em;
+        line-height: 1.8rem;
     }
     p{
         margin-top: 0;
-        font-size: 1.3rem;
-        line-height: 1.1em;
-        margin-bottom: 46px;
+        margin-bottom: 30px;
+        margin-right: 3.5%;
+        margin-left: 3.5%;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
     }
     &__button{
         @include buttonConfiguration;
@@ -47,7 +49,7 @@
 
 .howtodo{
     padding-bottom: 40px;
-    padding-top: 20px;
+    padding-top: 23px;
     padding-left: $padding-left-sections;
     padding-right: $padding-left-sections;
     h2{
@@ -75,6 +77,9 @@
     padding-top: 29px;
     border-radius: 15px;
     @include light-shadow;
+    &--lightpink{
+        background-color: $background-color-taste;
+    }
     &__number{
         position: absolute;
         left: -10px;
@@ -150,7 +155,7 @@
         padding: 5px 10px 5px 10px;
         top: 10px;
         right: 10px;
-        background-color:$background-color-new-tag;
+        background-color:$third-color;
         color: $text-color-new-tag;
     }
     &__title{
