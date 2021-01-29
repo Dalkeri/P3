@@ -14,32 +14,13 @@
     animation: vanish 500ms 2s forwards; 
     // animation: opacityDown 2s 3s forwards, scaleDown 1s 5s forwards; 
     @include font-family-Shrikhand;
+    @include createCircles($circles);
 }
   
-  .text{
-    color: white;
-    font-size: 1rem;
-  }
-  .circle1{
-    @include createCircle(110px, 0); 
-    @include rotateCircle(rotateLR);
-  }
-  .circle2{
-    @include createCircle(125px, 1);
-    @include rotateCircle(rotateRL);
-  }
-  .circle3{
-    @include createCircle(140px, 2);
-    @include rotateCircle(rotateLR);
-  }
-  .circle4{
-    @include createCircle(155px, 0);
-    @include rotateCircle(rotateRL);
-  }
-  .circle5{
-    @include createCircle(170px, 1);
-    @include rotateCircle(rotateLR);
-  }
+.text{
+  color: white;
+  font-size: 1rem;
+}
 
 
 @keyframes rotateLR{

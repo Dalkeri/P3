@@ -1,31 +1,21 @@
 //contient l'animation d'apparition des éléments des menus
 
 .menu_category {
-    .menuCard {
-      opacity: 0;
-      top: 20px;
-    }
-  }
-  
-  .card1 {
-    @include appearConfig(00ms);
-  }
-  .card2 {
-    @include appearConfig(500ms);
-  }
-  .card3 {
-    @include appearConfig(1000ms);
-  }
-  .card4 {
-    @include appearConfig(1500ms);
+  .menuCard {
+    opacity: 0;
+    top: 20px;
   }
 
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-      transform: translateY($shiftUp);
-    }
+  @include makeAppear($timings);
+}
+  
+@keyframes appear {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+    transform: translateY($shiftUp);
+  }
+}
+  

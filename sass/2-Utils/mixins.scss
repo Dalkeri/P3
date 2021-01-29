@@ -72,13 +72,21 @@
       border-left: 5px solid white; 
     }
 }
-
 @mixin rotateCircle($side, $duration: $duration){
     animation-duration: $duration;
     animation-name: $side;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+@mixin createCircles($circles){
+    @each $key, $value in $circles{
+      $infoCircle: $value;
+      .#{$key}{
+        @include createCircle(map-get($infoCircle, size), map-get($infoCircle, borderSide));
+        @include rotateCircle(map-get($infoCircle, rotationSide));
+      }
+    }
+  }
 
 
 // appear in menu
@@ -89,4 +97,12 @@
     animation-fill-mode: forwards;
     animation-delay: $animationDelay;
     // animation-iteration-count: infinite;
+}
+
+@mixin makeAppear($timing){
+    @each $key, $value in $timings{
+      .#{$key}{
+        @include appearConfig($value);
+      }
+    }
   }

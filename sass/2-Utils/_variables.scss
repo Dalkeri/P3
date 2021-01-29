@@ -7,19 +7,23 @@ $primary-color: #9356dc;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 
-// $background-color-new-tag: #99E2D0;
 $text-color-new-tag: #30a387;
 
 $padding-left-sections: 4%;
 $padding-left-restaurant-card: 3%;
-
-// $min-width-MQ-footer: 900px;
 
 
 //LOADER
 $diameter: 20px;
 $border: 0;
 $duration: 1.5s;
+$circles: (
+  circle1: ( size: 110px, borderSide: 0, rotationSide: rotateLR),
+  circle2: ( size: 125px, borderSide: 1, rotationSide: rotateRL),
+  circle3: ( size: 140px, borderSide: 2, rotationSide: rotateLR),
+  circle4: ( size: 155px, borderSide: 3, rotationSide: rotateRL),
+  circle5: ( size: 170px, borderSide: 0, rotationSide: rotateLR),
+);
 
 //NOTCH
 $height-card: 68px;
@@ -29,3 +33,9 @@ $width-carre: 60px;
 //appear
 $shiftUp: -20px;
 $duration: 2500ms;
+$timings : (
+  card1: 00ms,
+  card2: 500ms,
+  card3: 1000ms,
+  card4: 1500ms
+);
