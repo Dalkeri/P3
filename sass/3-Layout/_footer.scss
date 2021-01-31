@@ -1,10 +1,8 @@
 footer{
     background-color: $background-color-footer;
     color: white;
-    // padding-left: $padding-left-sections;
     padding-top: 25px;
     padding-bottom: 30px;
-    // border:2px solid yellow;
     img{
         filter: invert(100%);
         transform-origin: top left;
@@ -16,7 +14,6 @@ footer{
         flex-wrap: wrap;
         width: 100%;
         a, address{
-            // border:1px solid white;
             display: inline;
             font-style: normal;
             font-size: 1.1rem;
@@ -26,7 +23,6 @@ footer{
             min-width: 200px;
             margin-bottom: 4px;
             margin-left: $padding-left-sections;
-
             i{
                 font-size: 0.8rem;
             }

@@ -3,7 +3,7 @@
 .heart{
     position: absolute;
     display: inline;
-    right: 16%; /*16% 65px*/
+    right: 16%;
     top: 40px;
 
     font-size: 1.4rem;
@@ -18,7 +18,6 @@
         > .empty{
             background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(rgb(218, 209, 209)));
             -webkit-background-clip: text;
-                    // background-clip: text;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: 0px black;
         }
@@ -29,7 +28,6 @@
     position: absolute;
     background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
     -webkit-background-clip: text;
-            // background-clip: text;
     -webkit-text-fill-color: transparent;  
     transition: background 500ms ease;
 }
@@ -52,14 +50,12 @@
   
 .full{
     z-index: 0;
-    // color: $primary-color;
     background: -webkit-gradient(linear, left top, left bottom, from(#f50f91), to(white));
     -webkit-background-clip: text;
-            // background-clip: text;
      -webkit-text-fill-color: transparent;  
     transform: scale(0.9);
     position: absolute;
-    transition: opacity 100ms;/*, transform 500ms*/
+    transition: opacity 100ms;
 }
 
 @media screen and (max-width: 340px){

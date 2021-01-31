@@ -1,108 +1,105 @@
 @mixin font-family-Shrikhand{
-    font-family: 'Shrikhand', cursive;
+  font-family: 'Shrikhand', cursive;
 }
 @mixin font-family-Roboto{
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @mixin title-h2{
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 @mixin title-h2-menu{
-    font-size: 1.7rem;
-    font-weight: normal;
+  font-size: 1.7rem;
+  font-weight: normal;
 }
 
 @mixin title-card{
-    font-size: 1.25rem;
-    font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 @mixin light-shadow{
-    box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
+  box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
 }
 
 @mixin cardConfiguration{
-    cursor: pointer;
-    width: 98%;
-    max-width: 350px;
-    margin-bottom: 16px;
-    background-color: white;
-    border-radius: 15px;
-    position: relative;
-    @include light-shadow;
+  cursor: pointer;
+  width: 96%;
+  max-width: 350px;
+  margin-bottom: 16px;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  @include light-shadow;
 }
 
 @mixin buttonConfiguration{
-    font-size: 1rem;
-    border-radius: 25px 25px 25px 25px;
-    height: 50px;
-    line-height: 50px;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
-    box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
-
-    &:hover{
-        background: linear-gradient(to bottom, lighten(rgb(232, 114, 218), 5%), lighten(rgb(166, 92, 219), 5%) );
-        box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
-    }
+  font-size: 1rem;
+  border-radius: 25px 25px 25px 25px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to bottom, rgb(232, 114, 218), rgb(166, 92, 219) );
+  box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
+  &:hover{
+    background: linear-gradient(to bottom, lighten(rgb(232, 114, 218), 5%), lighten(rgb(166, 92, 219), 5%) );
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
+  }
 }
 
 //for loader
 @mixin createCircle($diameter: $diameter, $border: $border){
-    width: $diameter;
-    height: $diameter;
-    border-radius: 50%;
-    position: absolute;
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+  position: absolute;
        
-    @if $border == 0{
-      border-top: 5px solid white;
-    }
-    @else if $border == 1{
-      border-right: 5px solid white; 
-    }
-    @else if $border == 2{
-      border-bottom: 5px solid white; 
-    }
-    @else if $border == 3{
-      border-left: 5px solid white; 
-    }
+  @if $border == 0{
+    border-top: 5px solid white;
+  }
+  @else if $border == 1{
+    border-right: 5px solid white; 
+  }
+  @else if $border == 2{
+    border-bottom: 5px solid white; 
+  }
+  @else if $border == 3{
+    border-left: 5px solid white; 
+  }
 }
 @mixin rotateCircle($side, $duration: $duration){
-    animation-duration: $duration;
-    animation-name: $side;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  animation-duration: $duration;
+  animation-name: $side;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 @mixin createCircles($circles){
-    @each $key, $value in $circles{
-      $infoCircle: $value;
-      .#{$key}{
-        @include createCircle(map-get($infoCircle, size), map-get($infoCircle, borderSide));
-        @include rotateCircle(map-get($infoCircle, rotationSide));
-      }
+  @each $key, $value in $circles{
+    $infoCircle: $value;
+    .#{$key}{
+      @include createCircle(map-get($infoCircle, size), map-get($infoCircle, borderSide));
+      @include rotateCircle(map-get($infoCircle, rotationSide));
     }
   }
+}
 
 
 // appear in menu
 @mixin appearConfig($animationDelay: $delay) {
-    animation-duration: $duration;
-    animation-name: appear;
-    // animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: $animationDelay;
-    // animation-iteration-count: infinite;
+  animation-duration: $duration;
+  animation-name: appear;
+  animation-fill-mode: forwards;
+  animation-delay: $animationDelay;
 }
 
 @mixin makeAppear($timing){
-    @each $key, $value in $timings{
-      .#{$key}{
-        @include appearConfig($value);
-      }
+  @each $key, $value in $timings{
+    .#{$key}{
+      @include appearConfig($value);
     }
   }
+}
